@@ -18,6 +18,6 @@
 			unset($_SESSION['senha']);
 			header('location: admin.php');
 		}
-		
+
 	}//função para verificação de login//
 ?>

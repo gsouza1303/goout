@@ -1,20 +1,13 @@
-<html lang = 'PT-BR'> 
-	<head>
-		<meta charset = 'UTF-8'>
-		<title>Admin GO OUT</title>
-	</head>
-	<body>
-		<form method = 'post' action = 'autentica.php' />
-		
-		<label for = 'id'>ID:
-			<input type = 'text' name = 'id' id = 'id' max_lenght = '250' required = 'required' />
-		</label>
-		<label for = 'senha'>Senha:
-			<input type = 'password' name = 'senha' id = 'senha' required = 'required' />
-		</label>
-		
-		<input type = 'submit' name = 'enviar' value = 'Login!' />
-		
-		</form>
-	</body>
-</html>
+<?php
+$titulo = "Login";
+include("header.php");
+?>
+<form class="form-signin" action="autentica.php">
+  <h1 class="h3 mb-3 font-weight-normal text-center">Faça o login.</h1>
+  <label for="inputId" class="sr-only">Id</label>
+  <input name="id" type="number" id="inputId" class="form-control" placeholder="Id" required autofocus>
+  <label for="inputPassword" class="sr-only">Senha</label>
+  <input name="senha" type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+  <button class="btn btn-lg btn-dark btn-block" type="submit">Logar</button>
+</form>
+<?php include("footer.php"); ?>
