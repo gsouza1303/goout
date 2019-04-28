@@ -2,7 +2,7 @@
 $titulo = "Login";
 include("header.php");
 ?>
-<form class="form-signin" action="autentica.php">
+<form class="form-signin" action="autentica.php" method="post">
   <h1 class="h3 mb-3 font-weight-normal text-center">Faça o login.</h1>
   <label for="inputId" class="sr-only">Id</label>
   <input name="id" type="number" id="inputId" class="form-control" placeholder="Id" required autofocus>
