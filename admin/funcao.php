@@ -6,7 +6,7 @@
 		$conexao = mysqli_connect("localhost", "usbw", "root","goout");
 		$sql = "SELECT *
 				FROM admin
-				WHERER 'login' = '$id' AND 'senha' = '$senha'";
+				WHERER 'id' = $id AND 'senha' = '$senha'";
 		$salva = mysqli_query($conexao,$sql);
 		if(mysql_num_rows($salva)>0){
 			$_SESSION['id'] = $id;

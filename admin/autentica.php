@@ -5,7 +5,7 @@
 	$conexao = mysqli_connect("localhost", "root", "usbw","goout") or die ('Sem conexão');
 	$sql = "SELECT *
 			FROM admin
-			WHERE login = '$id' AND senha = '$senha'";
+			WHERE id = $id AND senha = '$senha'";
 	$salva = mysqli_query($conexao,$sql);
 	if(mysqli_num_rows($salva)>0){
 		$_SESSION['id'] = $id;
@@ -26,6 +26,6 @@
 <?php
 	}
 	else{
-		header('location: admin.php');
+		//header('location: admin.php');
 	}
 ?>
