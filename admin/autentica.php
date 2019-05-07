@@ -12,20 +12,22 @@
 		$_SESSION['senha'] = $senha;
 	//função para verificar se existe o login dado pelo usuário em nosso sistema//
 
-
 ?>
-		<html lang = 'PT-BR'> 
-			<head>
-				<meta charset = 'UTF-8'>
-				<title>Autenticação</title>
-			</head>
-			<body>
-				<?='Bem vindo '. $_SESSION['id'] . '!';?>
-			</body>
-		</html>
+<?php
+$titulo = "Login";
+include("header.php");
+?>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+<main role="main" class="inner cover">
+    <h1 class="cover-heading text-center">Bem vindo!</h1>
+	<button><a href = 'cadastra_e.php'>Cadastrar Evento</a></button>
+	<button><a href = 'logout.php'>Logout</a></button>
+</main>
+</div>
+<?php include("footer.php"); ?>
 <?php
 	}
 	else{
-		//header('location: admin.php');
+		header('location: admin.php');
 	}
 ?>
